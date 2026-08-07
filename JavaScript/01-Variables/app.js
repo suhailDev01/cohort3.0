@@ -104,21 +104,36 @@ function demo(){
 // console.log(nameF)   //reference error
 demo()
 
+{
+    let p = 32;   // let follow block scope  so reference error
+    var q = 34;   // whenever var does not follow block scope so code will be executed
+}
+
+console.log(q)
 
 
+let x = 39;
+{
+    console.log(x)
+}
 
+{
+    let college = "bdc"   //reference error
+}
+// console.log(college)
 
+let d = 64;
+{
+    let d = 98;
+    console.log(d)
+}
+console.log(d)
+  var h = 988;
+  {
+    var h = 89;
+  }
 
-
-
-
-
-
-
-
-
-
-
+console.log(h)
 
 
 
