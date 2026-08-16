@@ -210,3 +210,50 @@ console.log(finalLength)
  }
  greeting()
 
+// CALLBACK FUNCTION
+function demo(){
+   console.log("Study completed....")
+}
+function greet(callback){
+   console.log("study started....")
+   callback()
+}
+greet(demo)
+
+//EXAMPLE 2
+let myFunction = (name)=>{
+   console.log("Welcome",name)
+}
+function execute(anyFunction){
+   let name ="Nazmin"
+   anyFunction(name)
+}
+execute(myFunction)
+
+//HIGHER ORDER FUNCTION
+// let fn1 =()=>{
+//    return()=>{
+//       console.log("i am deppest function")
+//    }
+// }
+// console.log(fn1());
+
+//example 2
+function global(){
+   return()=>{
+      return()=>{
+         return()=>{
+            console.log("I am the last function")
+         }
+      }
+   }
+}
+let fi = global()()()
+console.log(fi)
+
+//RECURSION
+function greet(){
+   console.log("hello world")
+   greet()
+}
+greet()

@@ -32,3 +32,12 @@ do{
     for(let key in user){
         console.log(key, user[key]);
     }
+
+    //Q01:Print numbers from 1 to 10.
+    let nm = 10;
+    for(let i = 1; i<=nm; i++){
+        console.log(i)
+    }
+
+    //Q 02 - Print numbers from 10 to 1.
+   

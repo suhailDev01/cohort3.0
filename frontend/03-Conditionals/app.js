@@ -1,3 +1,4 @@
+//Write a JavaScript program to check whether a given alphabet is a vowel or a consonant using if-else statements.
 let char = 'A';
 
 if(char == 'a'){
