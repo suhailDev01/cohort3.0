@@ -1,7 +1,7 @@
- // 'use strict'
+// 'use strict'
 console.log(this)
 
-//1.2 — Regular Functions mein this
+ //1.2 — Regular Functions mein this
 function demo(){
     console.log(this);
 }
@@ -17,7 +17,7 @@ const user = {
 }
 user.greet();
 
-//1.4 — Arrow Functions mein this (Lexical this) ⭐
+ //1.4 — Arrow Functions mein this (Lexical this) ⭐
  const student = {
     name:"Akarsh",
     age:32,
@@ -103,7 +103,7 @@ function carDetail(){
 const showDetails = carDetail.bind(car);
 showDetails();
 
-// JavaScript Advanced Concepts - Coding Problems 
+ // JavaScript Advanced Concepts - Coding Problems 
 
 // Problem 2: Object Method Context
 const user = {
@@ -131,7 +131,7 @@ const user2 ={
 }
 user2.greetShow()
 
-// ## Problem 4: Nested Callback Problem
+ // ## Problem 4: Nested Callback Problem
 const person = {
     name:"Ankit",
     hobbies:["Coding", "Gaming", "Reading"],
@@ -171,3 +171,42 @@ const calculator = {
     }
 }
 calculator.add.call(calculator, 70)
+
+// function constructor
+// Function Constructor JavaScript ka ek aisa function hota hai jiska use 
+// same structure ke multiple objects banane ke liye kiya jata hai.
+function musicName(songName, albumName, duration,actorName){
+   this.songName=songName
+   this.albumName=albumName
+   this.duration=duration
+   this.actorName=this.actorName
+}
+let song1 = new musicName("rahul roy", "mai duniya bhoola dunga teri chahat me", "ashiqui", 4.6)
+let song2 = new musicName("salman khan", "tere bina kick mujhe milti nhi", "kick", 5.2)
+console.log(song1)
+console.log(song2)
+
+//prototype
+function person(name, age){
+    this.name =name
+    this.age =age
+}
+person.prototype.showName = function(){
+   console.log(this.name)
+   console.log(this.age)
+}
+const personName = new person("suhail", 22)
+personName.showName();
+
+//Q2. Student constructor banao jisme name aur course ho.
+//Prototype mein introduce() method add karo jo student ka introduction de.
+function student(name,course){
+   this.name = name
+   this.course = course
+}
+student.prototype.introduce= function(){
+   console.log(this.name)
+}
+let introduction = new student("Sameer","BCA")
+introduction.introduce();
+
