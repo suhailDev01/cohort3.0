@@ -14,7 +14,7 @@ My goal is to learn consistently, build real-world projects, improve problem-sol
 ## 📚 Learning Roadmap
 - ✅ HTML5
 - ✅ CSS3
-- 🟡 JavaScript (In Progress)
+- ✅ JavaScript (In Progress)
 - ⬜ DOM Manipulation
 - ⬜ Asynchronous JavaScript
 - ⬜ React.js
