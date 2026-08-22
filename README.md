@@ -71,20 +71,20 @@ Cohort3.0
 | Day | Topic | Status | 
 |-----|-------|--------|
 | Day 1 | HTML Basics | ✅  |
-| Day 2 | CSS Basics | ✅ 
-| Day 3 | JavaScript Phase-1(Variables ) ✅ |
-| Day 4 | JavaScript Phase-1 (Operators) ✅ 
-| Day 5 | JavaScript Phase-1 (Conditionals) ✅ |
-| Day 6 | JavaScript Phase-1 (Loops) ✅ |
-| Day 7 | JavaScript Phase-2 (Functions) ✅ |
-| Day 8 | JavaScript Phase-2 (Arrays) ✅ 
-| Day 10 | JavaScript Phase-2 (Objects)  ✅ |
-| Day 11 | JavaScript  Phase-3 (How JS Work) ✅ |
-| Day 12 | JavaScript  Phase-4 (Objects Deeper) ✅ |
-| Day 13 | JavaScript  Phase-4(OOps) ✅ |
-| Day 13 | JavaScript  Phase-5(Async JS) ✅ |
-| Day 13 | JavaScript  Phase-5(Promises and Async JS) ✅ |
-| Day 13 | JavaScript  (Introduction of DOM) 🟡 |
+| Day 2 | CSS Basics | ✅ |
+| Day 3 | JavaScript Phase-1(Variables )| ✅ |
+| Day 4 | JavaScript Phase-1 (Operators) | ✅ | 
+| Day 5 | JavaScript Phase-1 (Conditionals) | ✅ |
+| Day 6 | JavaScript Phase-1 (Loops) | ✅ |
+| Day 7 | JavaScript Phase-2 (Functions) | ✅ |
+| Day 8 | JavaScript Phase-2 (Arrays) | ✅ |
+| Day 10 | JavaScript Phase-2 (Objects) | ✅ |
+| Day 11 | JavaScript  Phase-3 (How JS Work) | ✅ |
+| Day 12 | JavaScript  Phase-4 (Objects Deeper) | ✅ |
+| Day 13 | JavaScript  Phase-4(OOps) | ✅ |
+| Day 13 | JavaScript  Phase-5(Async JS) | ✅ |
+| Day 13 | JavaScript  Phase-5(Promises and Async JS) | ✅ |
+| Day 13 | JavaScript  (Introduction of DOM) | 🟡 |
 
 ## 💼 Projects
 Projects will be added here as I progress through the Cohort 3.0 curriculum.
