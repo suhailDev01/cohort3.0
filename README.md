@@ -78,13 +78,13 @@ Cohort3.0
 | Day 6 | JavaScript Phase-1 (Loops) | ✅ |
 | Day 7 | JavaScript Phase-2 (Functions) | ✅ |
 | Day 8 | JavaScript Phase-2 (Arrays) | ✅ |
-| Day 10 | JavaScript Phase-2 (Objects) | ✅ |
-| Day 11 | JavaScript  Phase-3 (How JS Work) | ✅ |
-| Day 12 | JavaScript  Phase-4 (Objects Deeper) | ✅ |
-| Day 13 | JavaScript  Phase-4(OOps) | ✅ |
+| Day 9 | JavaScript Phase-2 (Objects) | ✅ |
+| Day 10 | JavaScript  Phase-3 (How JS Work) | ✅ |
+| Day 11 | JavaScript  Phase-4 (Objects Deeper) | ✅ |
+| Day 12 | JavaScript  Phase-4(OOps) | ✅ |
 | Day 13 | JavaScript  Phase-5(Async JS) | ✅ |
-| Day 13 | JavaScript  Phase-5(Promises and Async JS) | ✅ |
-| Day 13 | JavaScript  (Introduction of DOM) | 🟡 |
+| Day 14 | JavaScript  Phase-5(Promises and Async JS) | ✅ |
+| Day 15 | JavaScript  (Introduction of DOM) | 🟡 |
 
 ## 💼 Projects
 Projects will be added here as I progress through the Cohort 3.0 curriculum.
