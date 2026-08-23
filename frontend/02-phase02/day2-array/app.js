@@ -1,0 +1,277 @@
+
+//Access value
+let fruits = ["apple", "mango","banana"]
+// console.log(fruits[0])
+
+ //updatate value of array
+fruits[1]= "orange";
+console.log(fruits)
+
+ //Q1. Ek students array banao jisme 5 student names ho.
+let students = ["ankit", "shukrullah", "nilesh","anurag","jugesh"]
+console.log(students)
+
+//Q2. Array ke first aur last element ko print karo.
+console.log(students[0] ,students [students.length-1])
+
+//Q3. Ek array banao jisme string, number aur boolean ho. Har element ka typeof print karo.
+let arr = ["mehtab", 23, true]
+console.log(typeof arr[0],typeof arr[1], typeof arr[2])
+
+//create a array and print 3rd value of array
+let numbers = [ 10,20,30,40,50]
+console.log(numbers[2])
+
+ //create a array and replace anyone value
+let skills = ["html", "css", "javascript"]
+skills[1]= "tailwind css"
+console.log(skills) 
+
+//Length
+let numbers1 = [32,43,82,20,32,23]
+console.log(numbers1.length)
+
+//last element
+console.log(numbers1[numbers1.length -1])
+//check array is empty or not
+let users = []
+if(users === 0){
+    console.log("array is empty")
+}
+else{
+    console.log("array is not empty")
+}
+
+//push()  end me add
+let arr2 = [33,53,43]
+arr2.push(98)
+console.log(arr2)
+
+// let empty = [];
+empty.push(23,3,83,93,32)
+console.log(empty)
+let arr3 = [20,30]
+let arr4 = arr3.push(40, 87, 50)
+console.log(arr3)
+console.log(arr4)
+
+//pop()  End se remove
+let num3 = [ 32, 33,55]
+let num4 = num3.pop()
+console.log(num3)
+console.log(num4)
+
+ //map() =>existing array ke har elment ko transform karke new array banana
+ let num = [1, 2, 3, 4];
+ let doubled = num.map((n)=>{
+    return ( n * 2)
+ })
+ console.log(num)
+ console.log(doubled)
+
+  //Har number ko 2 se multiply karke new array banao.
+ let numbers = [2,4,6,8]
+ let multi = numbers.map(num => {
+    return ( num*2)
+ })
+ console.log(multi)
+ console.log(numbers)
+
+ //Har number mein 5 add karo.
+ let num1 = [ 5,10,15]
+ let ans = num1.map(num =>{
+    return num +5
+ })
+ console.log(ans)
+
+
+ //New array banao jisme saare names uppercase hon.
+ let names = ["suhail", "rahul","aman"];
+ let upperCs = names.map(up => {
+       return up.toUpperCase()
+ })
+ console.log(upperCs)
+
+ //filter() => Condition satisfy karne wale elements ko select karke new array banana.
+
+ let num2 = [20,10,25,30,40,53,29,87]
+ let Cd = num2.filter(gt =>{
+    return gt > 20;
+ })
+ console.log(Cd)
+
+ //Sirf even numbers ka new array banao.
+ let nm = [10,15,20,25,30,32,24,45]
+ let even = nm.filter(ev =>{
+    return (ev % 2 ==0)
+ })
+ console.log(even)
+
+//Sirf 18+ ages nikalo.
+ let age = [ 12,43,53,23,23,19,14]
+ let checkAge = age.filter(function(aged){
+    return aged > 18
+ })
+ console.log(checkAge)
+
+  //find()  => Condition satisfy karne wala first element return karta hai.
+ let number1 = [20,19,14,24]
+ let ans1 = number1.find(num =>  num > 20
+    );
+ console.log(ans1)
+
+  //First "Aman" find karo.
+ let name = [ "sharthak","aman","krishna","ritik","aman"]
+ let findName = name.find(nm =>
+     nm ==="aman")
+
+     console.log(findName)
+
+    //some() => atleast one condition true then return true otherwise false
+
+    //Check karo kya koi number 35 se greater hai.
+     let number2 = [23,43,42,13,32,14,15]
+     let Greater35 = number2.some(nm => nm > 35)
+      console.log(Greater35)
+
+      //Check karo kya "Admin" user exist karta hai using some().
+      let user = ["vikash","prinsh","manisha","nazmin"]
+      let checkAdmin = user.some(ad => ad ==="admin")
+      console.log(checkAdmin)
+
+//EVERY() => ALL CONDITION MUST BE TRUE THEN RETURN TRUE OTHERWISE FALSE RETURN
+let num = [ 12,32,98,32];
+let result = num.every(nm => nm > 49)
+console.log(result)
+
+ //Check karo kya saare users 18+ hain.
+let ages = [20, 25, 30, 17];
+let checkAge = ages.every(function(value){
+    return value >18
+})
+console.log(checkAge)
+
+ //reduce()  => array ke sare element ko process karke ek final result banana 
+let numbers = [21,32,10,15,32]
+let sum = 0;
+let sum1 = numbers.reduce((acc , current)=>{
+    return acc + current
+},0)
+console.log(sum1)
+//visualization
+// Initial acc = 0   like in other way we declare let sum = 0; like this acc work here
+
+// 0 + 10 = 10
+// 10 + 20 = 30
+// 30 + 30 = 60
+
+ // reduce() se product nikalo:
+let num1 = [ 2, 5, 8]
+let ans = num1.reduce((acc, current)=>{
+   return acc * current
+},1)
+console.log(ans)
+
+//forEach() => Array ke har element par koi action perform karne ke liye use hota hai.
+let eachValue = [20,10,20,30,40]
+eachValue.forEach(num =>{
+   console.log(num)
+})
+
+let name = ["sheryians", "Sharthak","ritik", "devendra", "harsh"]
+name.forEach(greet =>{
+   console.log('hello', greet)
+})
+
+// # Part 4 — Array Iteration Methods (56–75)
+
+// 1. Use `forEach` to print all numbers doubled.
+    let numbers = [1,2,3,4,5]
+    numbers.forEach(num =>{
+      
+      console.log(num *2)
+    })
+
+ // 2. Use `map` to square all numbers.
+let square = [2,3,4,5]
+let findSquare = square.map(sq =>{
+   return sq *sq
+})
+console.log(findSquare)
+
+ // 3. Use `filter` to get even numbers.
+  let even = [20,19,17,23,43,48]
+  let findEven = even.filter(ft =>{
+   return (ft % 2 ==0)
+  })
+  console.log(findEven)
+
+ // 4. Use `reduce` to calculate sum.
+  let sum = [3,24,53,82,78]
+  let totalsum = sum.reduce((acc, current)=>{
+   return acc + current
+  },0)
+  console.log('sum=>',totalsum)
+
+ // 5. Use `reduce` to find maximum number.
+  let num = [23,53,98,33,52,78]
+  let maxNumber = num.reduce((acc,current)=>{
+       return current > acc ? current : acc
+  },23)
+  console.log(maxNumber)
+
+// 6. Use `find` to get first even number.
+       let numb = [23,53,58,21,44,98]
+       let numbEven = numb.find(nm=> nm % 2 ==0)
+      console.log(numbEven)
+        
+ // 7. Use `findIndex` to locate number > 50.
+      let nums = [32,42,50,29,79]
+      let numIndex = nums.findIndex(index => index === 50)
+      console.log(numIndex)
+
+// 8. Use `some` to check if any number is negative.
+      let sm = [23,53,98,-12,94]
+      let smNegative = sm.some(ng => ng < 0)
+      console.log(smNegative)
+
+// 9. Use `every` to check if all numbers are positive.
+     let ps = [43,98,19,43]
+     let psPositive = ps.every(positive => positive > 0 )
+     console.log(psPositive)
+
+// 10. Create array of names and convert all to uppercase.
+  let names = ["shahrukh","saravare","sujit","kandu"]
+       let convertUpper = names.map((cn)=>{
+
+       return cn.toUpperCase();
+       })
+     console.log(convertUpper)  
+
+// 11. Filter all students with marks > 80.
+       let students = [78,54,81,63,87]
+       let studentsMarks = students.filter((mrks)=>{
+         return mrks > 80
+       })
+       console.log(studentsMarks)
+
+// 12. Calculate average using reduce
+       let nb = [10,20,30,40]
+       let totalSum= nb.reduce((acc,current)=>{
+             return acc + current 
+       },0) 
+      let average = totalSum / nb.length;
+      console.log(average)
+// 13. Count occurrences of numbers in array.
+// 14. Flatten nested arrays using `flat`.
+// 15. Remove duplicates using `Set`.
+// 16. Sort array of objects by age.
+// 17. Find total price of shopping cart.
+let price = [23,34,53,98]
+let totalPrice = price.reduce((acc,current)=>{
+      return acc + current
+},0)
+     console.log(totalPrice)
+// 18. Group users by age.
+// 19. Chain `filter` and `map`.
+// 20. Explain difference between `map` and `forEach`.
