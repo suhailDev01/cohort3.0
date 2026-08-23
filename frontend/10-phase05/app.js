@@ -70,9 +70,9 @@ setTimeout(()=>{
 },1000)
 
  //setInterwal => Kisi function ko given interval ke baad repeatedly chalata hai.
-setInterval(function(){
-    console.log("set Interwal") // yaha har 2 second ke bad cod chalata rhega mtlb repeatedly
-},2000)
+// setInterval(function(){
+//     console.log("set Interwal") // yaha har 2 second ke bad cod chalata rhega mtlb repeatedly
+// },2000)
 
 // isi repetition ko stop karne ke liye ham clear interwal user karte hai
 let id = setInterval(function(){

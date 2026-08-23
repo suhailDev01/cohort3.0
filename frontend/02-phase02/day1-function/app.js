@@ -6,18 +6,18 @@ greet("Aman")  //hello Aman
 greet("Priya")  //hello Priya
 
 
-// //function Expression
+ //function Expression
  const greet1 = function(name){
     console.log("hello" +" "+name)
  }
  greet1("Rahul")
 
-//  //Anonymous function
+ //Anonymous function
  const sayHi = function(){
     console.log("Hii guys...");
  };
 sayHi()
-//  //Arrow function
+ //Arrow function
  let add = (a, b) =>{
     sum = a + b;
     return sum;
@@ -124,7 +124,7 @@ console.log(finalLength)
  //function as first class citizen
  // imp definition: In JavaScript, functions are first-class citizens because they can be assigned to variables, passed as arguements, returned from other functions, and stored in objects or arrays, just like any other value.
  
-//  //pas a function as an argument (callback)
+  //pas a function as an argument (callback)
  function sayHi1(){
     console.log("hi")/
  }
@@ -133,7 +133,7 @@ console.log(finalLength)
  }
  execute(sayHi1);
 
-//  //store a function inside an object
+ //store a function inside an object
  let user = {
     name:"sharthak",
     age: 33,
@@ -143,7 +143,7 @@ console.log(finalLength)
  }
  user.profession()
 
-//  //call back function
+  //call back function
  function greet3(name){
     console.log("hello"+" "+name);
  }
@@ -153,7 +153,7 @@ console.log(finalLength)
  }
  processUser(greet);
 
-//  // other example 
+ // other example 
  function userProcess(name,callback){
     console.log("proceessing user"+" "+name)
     callback(name);

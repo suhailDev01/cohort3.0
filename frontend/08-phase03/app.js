@@ -11,8 +11,23 @@ function hello(){
 // console.log(age)
 // let age = 20;    //tdz
 
-// Part 2: Loops
-//Q6. Print numbers from 1 to 50 using a loop.
-for(let i=1; i <= 50; i++){
-    console.log(i)
+//scope
+let  str = "suhail";
+function greet(){
+    console.log(str);
 }
+greet();
+
+//lexical scope => Inner function apne outer/parent function ke variables ko access kar sakta hai
+let b = 34;
+function outer(){
+    console.log(b)
+    let a = 32;
+    function Inner(){
+        
+        console.log(a)
+    }
+    Inner()
+    
+}
+outer()
