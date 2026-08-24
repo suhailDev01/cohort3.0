@@ -19,7 +19,7 @@ function greet(){
 greet();
 
 //lexical scope => Inner function apne outer/parent function ke variables ko access kar sakta hai
-let b = 34;
+
 function outer(){
     console.log(b)
     let a = 32;
