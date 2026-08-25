@@ -1,6 +1,13 @@
 const body = document.body
 const main = document.querySelector("main")
 const h1 = document.querySelector("h1")
+let box = document.querySelector("#box");
+
+let addBtn = document.querySelector("#add");
+let removeBtn = document.querySelector("#remove");
+let checkBtn = document.querySelector("#check");
+let toggleBtn = document.querySelector("#toggle");
+let replaceBtn = document.querySelector("#replace");
 console.log(main.childNodes)
 console.log(main.children)
 
@@ -42,3 +49,26 @@ body.style.fontFamily = "sans-serif"
  //contains() -> check karta hai ki class hai ki nhi
  const isClass = h1.classList.contains("dom")
  console.log(isClass)
+
+ addBtn.addEventListener("click",()=>{
+    box.classList.add("active")
+    console.log(box)
+ })
+
+ removeBtn.addEventListener("click",()=>{
+    box.classList.remove("red")
+    console.log(box)
+ })
+
+ checkBtn.addEventListener("click",()=>{
+    let isRed = box.classList.contains("red")
+    console.log(isRed)
+ })
+toggleBtn.addEventListener("click", ()=>{
+    box.classList.toggle("active")
+    console.log(box)
+})
+ replaceBtn.addEventListener("click",function(){
+    box.classList.replace("red", "blue")
+    console.log(box)
+ })
