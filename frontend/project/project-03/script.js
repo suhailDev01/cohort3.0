@@ -2,6 +2,7 @@ const main = document.querySelector("main")
 const btn = document.querySelector("button")
 const timer = document.querySelector("#timer")
 const box = document.createElement("div")
+const gameOver = document.querySelector(".overlay")
 box.classList.add("box")
 
 let time = 0;
@@ -15,11 +16,13 @@ const randomColor =()=>{
 const randomBox=()=>{
     box.style.backgroundColor = randomColor();
     main.append(box)
+    let mainH = main.clientHeight - box.offsetHeight;
+    let mainW = main.clientWidth - box.offsetWidth
       
-           let rx = Math.random() *100;
-           let ry = Math.random() * 100;
-           box.style.top = `${rx}%`;
-           box.style.right = `${ry}%`;
+           let rx = Math.random() *mainH;
+           let ry = Math.random() * mainW;
+           box.style.top = `${rx}px`;
+           box.style.right = `${ry}px`;
 }
 
 btn.addEventListener("click", ()=>{
@@ -36,6 +39,6 @@ btn.addEventListener("click", ()=>{
         setTimeout (()=>{
           
      clearInterval(interwal)
+     gameOver.style.display = "flex"
       },10000)
 
-  
