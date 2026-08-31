@@ -10,10 +10,33 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 main{
     height: 70%;
     width: 25%;
     border: 1px solid white;
     border-radius: 4px;
+    padding: 10px;
+    position: relative;
+}
+button{
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+.box{
+    position:absolute;
+    width: 15%;
+    height: 15%;
+    background-color:red;
+    border-radius: 5px;
+    margin-top: 10%;
+    margin-left: 70%;
+}
+.top{
+    color: white;
 }
