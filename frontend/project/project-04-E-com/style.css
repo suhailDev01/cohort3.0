@@ -10,5 +10,109 @@ html,body{
 main{
     width: 100%;
     height: 100%;
-    background-color: olivedrab;
+    background-color: whitesmoke;
+    padding: 7px;
+}
+nav{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(98, 206, 239);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+button{
+    padding: 7px 13px;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+}
+.products{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.product-card{
+    padding: 10px;
+    width: 20%;
+    height: 54%;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgba(8, 130, 71, 0.667);
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.img{
+    width: 100%;
+    height: 50%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#update{
+    background-color: darkgoldenrod;
+    color: white;
+}
+#del{
+    background-color: darkred;
+    color: white;
+}
+.form{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.773);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+input{
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.form .top{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 40px;
+    color: white;
 }

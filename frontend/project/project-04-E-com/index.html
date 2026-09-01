@@ -8,7 +8,40 @@
 </head>
 <body>
        <main>
-        
+        <nav>
+            <h1>E-com</h1>
+            <button id="create">create product</button>
+        </nav>
+        <div class="products">
+            <div class="product-card">
+                <div class="img">
+                    <img src="https://static.vecteezy.com/system/resources/previews/031/605/688/large_2x/futuristic-fashion-original-sneakers-future-design-of-stylish-sports-shoes-with-neon-glow-futuristic-urban-aesthetics-sportswear-style-and-fashion-tomorrow-footwear-ai-generative-free-photo.jpg" alt="img">
+                </div>
+                <div class="text">
+                <h3>Name</h3>
+                <p>description</p>
+                <p>price</p>
+                </div>
+                <div class="btns">
+                    <button id="update">update</button>
+                    <button id="del">delete</button>
+                </div>
+             </div>
+        </div>
+        <div class="form">
+            <div class="top">
+                <div></div>
+                <h1 id="close">x</h1>
+            </div>
+            <form>
+                <h1>create product</h1>
+                <input type="text" placeholder="product name"/>
+                <input type="text" placeholder="description"/>
+                <input type="number" placeholder="price"/>
+                <input type="url" placeholder="image url"/>
+                <button>create</button>
+            </form>
+        </div>
        </main>
          <script src="script.js"></script>
 </body>
