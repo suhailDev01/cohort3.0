@@ -5,9 +5,10 @@ const form = document.querySelector("form")
 const productsDiv = document.querySelector(".products")
 
  const productsArr = [];
+ let updateIndex = null;
 let ui = ()=>{
     productsDiv.innerHTML=""
-    productsArr.forEach((elem)=>{
+    productsArr.forEach((elem,index)=>{
         productsDiv.innerHTML+= ` <div class="product-card">
                 <div class="img">
                     <img src="${elem.img}" alt="img">
@@ -18,8 +19,8 @@ let ui = ()=>{
                 <p>${elem.price}</p>
                 </div>
                 <div class="btns">
-                    <button onclick="updateProduct(' ${elem.productName}')" id="update">update</button>
-                    <button id="del">delete</button>
+                    <button onclick="updateProduct('${elem.productName}')" id="update">update</button>
+                    <button onclick="deleteProduct(${index})" id="del">delete</button>
                 </div>
              </div> `
     })
@@ -54,7 +55,16 @@ form.addEventListener('submit',(event)=>{
         price,
         img,
     };
-    productsArr.push(obj);
+
+    if(updateIndex !== null){
+        productsArr[updateIndex]=obj
+        updateIndex = null
+    }
+    else{
+           productsArr.push(obj);
+    }
+
+    //productsArr.push(obj);
     console.log(productsArr);
    ui();
    form.reset();
@@ -63,9 +73,14 @@ form.addEventListener('submit',(event)=>{
 const updateProduct=(name)=>{
      formDiv.style.display = "flex"
      let product = productsArr.find((elem)=> elem.productName===name)
+     updateIndex = productsArr.findIndex((elem)=> elem.productName===name)
       form[0].value= product.productName
       form[1].value= product.discription
       form[2].value= product.price
       form[3].value= product.img
 
+}
+const deleteProduct = (index) =>{
+    productsArr.splice(index,1)
+    ui();
 }
