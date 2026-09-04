@@ -21,8 +21,9 @@ main{
 .game{
     width: 80%;
     height: 80%;
-   background-color: rgb(121, 218, 150);;
+   background-color: #DFF6FF;
    position: relative;
+   overflow: hidden;
 }
 .bird-img{
    
@@ -30,4 +31,9 @@ main{
     padding: 10px 10px;
     position: absolute;
     object-fit: cover;
+}
+.pipe{
+    width: 40px;
+    
+    background-color: green;
 }
