@@ -24,5 +24,7 @@ function createPipe(){
      let gap = 150
      let topHeight = Math.random() * maxHeight + 50
      let botttomHeight = maxHeight - topHeight - gap
+     console.log(topHeight)
+     console.log(botttomHeight)
 }
 createPipe()
