@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <nav>
+                <h1>Taskify</h1>
+                <div class="actionBtns">
+                    <div class="searchBar">
+                        <input type="text" data-search placeholder="Search Tasks">
+                    </div>
+                    <label class="themeToggle">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="slider">
+                            <i class="ri-moon-fill sliderIcon moon"></i>
+                            <i class="ri-sun-fill sliderIcon sun"></i>
+                        </span>
+                    </label>
+                    <button id="addTaskBtn" class="btn">Add a Task</button>
+                    <button id="delAllTasks" class="btn hide">Delete All Tasks</button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="divider"></div>
+        
+        <main>
+            <div class="dashboard">
+                <div class="taskStats">
+                    <span id="totalTasks">0</span>
+                    <h2>Total Tasks</h2>
+                </div>
+                <div class="taskStats">
+                    <span id="completedTasks">0</span>
+                    <h2>Completed Tasks</h2>
+                </div>
+                <div class="taskStats">
+                    <span id="pendingTasks">0</span>
+                    <h2>Pending Tasks</h2>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <section class="tasks">
+
+            </section>
+        </main>
+
+        <section id="addTaskModale" class="modale">
+            <div class="formTop">
+                <h1>Create a New Task</h1>
+                <button class="addCloseBtn">Close</button>
+            </div>
+            <form id="addTaskForm" class="modaleForm">
+                <label for="title">Enter Title</label>
+                <input name="title" type="text" id="createTitle" placeholder="Enter Task Title">
+                <br/> 
+                
+                <label for="description">Enter Description</label>
+                <input name="description" type="text" id="createDescription" placeholder="Enter Task Description">
+                <br/>
+
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="">Select Category</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="health">Health</option>
+                    <option value="finance">Finance</option>
+                    <option value="shopping">Shopping</option>
+                </select>
+                <br>
+
+                <button id="submitBtn">Add Task</button>
+            </form>
+        </section>
+        
+        <section id="updateModale" class="modale">
+            <div class="formTop">
+                <h1>Update Task</h1>
+                <button class="editCloseBtn">Close</button>
+            </div>
+            <form id="updateForm" class="modaleForm">
+                <label for="title">Enter Title</label>
+                <input name="title" type="text" id="editTitle" placeholder="Edit Title">
+                <br/>
+
+                <label for="description">Enter Description</label>
+                <input name="description" type="text" id="editDescription" placeholder="Edit Description">
+                <br/>
+
+                <label for="category">Category</label>
+                <select id="editCategory" name="category">
+                    <option value="">Select Category</option>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="health">Health</option>
+                    <option value="finance">Finance</option>
+                    <option value="shopping">Shopping</option>
+                </select>
+                <br>
+
+                <button id="editTaskBtn">Edit Task</button>
+            </form>
+        </section>
+
+        <section class="attributeVSValue">
+            <h3>Event Propagation Demonstration</h3>
+            <div class="eventBubbling">
+                <h4 class="eventTag">Event Bubbling</h4>
+                <div class="Grandparent" id="Grandparent1">
+                    Grandparent
+                    <div class="Parent" id="Parent1">
+                        Parent
+                        <button class="Child" id="Child1">Child</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eventCapturing">
+                <h4 class="eventTag">Event Capturing</h4>
+                <div class="Grandparent" id="Grandparent2">
+                    Grandparent
+                    <div class="Parent" id="Parent2">
+                        Parent
+                        <button class="Child" id="Child2">Child</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="pipleline">
+            <h1>Browser Rendering Pipeline</h1>
+            <section class="renderFlow">
+
+                <div class="htmlFlow">
+                    <div class="flowBox htmlBox">HTML</div>
+                    <div class="verticalLine"></div>
+
+                    <div class="flowBox htmlBox">Parsing</div>
+                    <div class="verticalLine"></div>
+
+                    <div class="flowBox htmlBox">Tokenization</div>
+                    <div class="verticalLine"></div>
+
+                    <div class="flowBox htmlBox">DOM Tree</div>
+                </div>
+
+                <div class="cssFlow">
+                    <div class="flowBox cssBox">CSS</div>
+
+                    <div class="verticalLine verticalLineCss"></div>
+
+                    <div class="flowBox cssBox">CSSOM Tree</div>
+                </div>
+
+                <div class="renderWrapper">
+                    <span class="renderLabel">DOM + CSSOM</span>
+                    <div class="flowBox renderBox">Render Tree</div>
+                </div>
+
+                <div class="leftConnector"></div>
+                <div class="rightConnector"></div>
+            </section>
+        </div>
+    </div>
+
+    <script defer src="./app.js"></script>
+</body>
+</html>
