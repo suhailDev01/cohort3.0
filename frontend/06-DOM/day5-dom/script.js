@@ -38,5 +38,7 @@ let userData = [
     married:"yes",
 }
 ]
-localStorage.setItem("fam people->",JSON.stringify(userData))
-//console.log(userData)
+localStorage.setItem("fam-people",JSON.stringify(userData))
+let ld = localStorage.getItem("fam-people")
+let value = JSON.parse(ld)
+console.log(value)

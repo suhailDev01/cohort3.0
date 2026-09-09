@@ -13,7 +13,7 @@ bt.addEventListener("click",()=>{
                         <button class="btn edit">edit</button>
                         <button class="btn del">delete</button>
                     </div>
-                </div>`
+                </div> `
     inp.value = "";
 })
 

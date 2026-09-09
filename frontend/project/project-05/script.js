@@ -20,11 +20,16 @@ function createPipe(){
     const pipeBottom= document.createElement("div")
     pipeTop.classList ="pipe"
     pipeBottom.classList ="pipe"
-    let maxHeight = game.clientHeight;
-     let gap = 150
-     let topHeight = Math.random() * maxHeight + 50
-     let botttomHeight = maxHeight - topHeight - gap
-     console.log(topHeight)
-     console.log(botttomHeight)
+    
+     let gap = 100
+    let gameHeight = game.clientHeight;
+       let maxHeight = gameHeight-gap-50
+     let topPipeHeight = Math.random()*maxHeight + 50
+     let botttomPipeHeight = maxHeight - topPipeHeight - gap
+    pipeTop.style.height = topPipeHeight + 'px'
+    pipeBottom.style.height = botttomPipeHeight + 'px'
+    pipeTop.style.top = 0 
+    pipeBottom.style.bottom = 0 
+    game.append(pipeTop, pipeBottom)
 }
 createPipe()
