@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="mainContainer">
+        <aside class="sidebar">
+            <div class="brandArea">
+                <div class="brandIcon"><i class="ri-stack-fill"></i></div>
+                <div class="brandText">
+                    <h2>FinTrack Pro</h2>
+                    <p>Enterprise Finance</p>
+                </div>
+            </div>
+
+            <nav class="sideNav">
+                <a href="#" class="navLink active" id="dashLink">
+                    <i class="ri-layout-grid-fill"></i> Dashboard
+                </a>
+                <a href="#" class="navLink" id="settingsLink">
+                    <i class="ri-settings-3-line"></i> Settings
+                </a>
+            </nav>
+
+            <button id="addTxnBtn" class="btn addBtn">
+                <i class="ri-add-line"></i> Add Transaction
+            </button>
+        </aside>
+
+        <div class="contentArea">
+            <header>
+                <nav>
+                    <span></span>
+                    <div class="actionBtns">
+                        <span class="userName">Punit1</span>
+                        <button class="btn logoutBtn">
+                            <i class="ri-logout-box-r-line"></i> Logout
+                        </button>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+
+                <div id="dashboardPage" class="page">
+                    <div class="pageHead">
+                        <h1>Financial Overview</h1>
+                        <p>Real-time tracking application</p>
+                    </div>
+
+                    <div class="dashboard">
+                        <div class="statCard">
+                            <div class="statIcon blueIcon"><i class="ri-bank-fill"></i></div>
+                            <div class="statInfo">
+                                <p class="statLabel">Current Balance</p>
+                                <span id="currentBalance">
+                                    <span class="currencyIcon">₹</span>
+                                    <span id="curBalanceCount">0.00</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="statCard">
+                            <div class="statIcon greenIcon"><i class="ri-arrow-up-circle-fill"></i></div>
+                            <div class="statInfo">
+                                <p class="statLabel">Total Income</p>
+                                <span id="totalIncome" class="incomeVal">
+                                    <span class="currencyIcon">₹</span>
+                                    <span id="totalIncomeCount">0.00</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="statCard">
+                            <div class="statIcon redIcon"><i class="ri-arrow-down-circle-fill"></i></div>
+                            <div class="statInfo">
+                                <p class="statLabel">Total Expense</p>
+                                <span id="totalExpense" class="expenseVal">
+                                    <span class="currencyIcon">₹</span>
+                                    <span id="totalExpenseCount">0.00</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="statCard">
+                            <div class="statIcon purpleIcon"><i class="ri-exchange-funds-fill"></i></div>
+                            <div class="statInfo">
+                                <p class="statLabel">Total Transactions</p>
+                                <span id="totalTxns">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="midSection">
+
+                        <div class="midLeft">
+                            <!-- chart -->
+                            <div class="box">
+                                <h2 class="boxTitle">Cash Flow Analysis</h2>
+                                <div class="chartArea">
+                                    <canvas id="cashFlowChart"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <h2 class="boxTitle">All Transactions</h2>
+                                <div class="tableFilters">
+                                    <div class="searchBar">
+                                        <i class="ri-search-line"></i>
+                                        <input type="text" id="searchInput" placeholder="Search transactions...">
+                                    </div>
+                                    <select id="typeFilter" class="filterSelect">
+                                        <option value="all">All Types</option>
+                                        <option value="income">Income Only</option>
+                                        <option value="expense">Expense Only</option>
+                                    </select>
+                                </div>
+
+                                <table id="txnTable">
+                                    <thead>
+                                        <tr>
+                                            <th>DATE</th>
+                                            <th>DESCRIPTION</th>
+                                            <th>CATEGORY</th>
+                                            <th>AMOUNT</th>
+                                            <th>ACTIONS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="txnBody">
+                                        
+                                    </tbody>
+                                </table>
+
+                                <div id="emptyState" class="emptyState hide">
+                                    <i class="ri-inbox-2-line"></i>
+                                    <p>No transactions yet. Add one to get started.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="midRight">
+                            <div class="box">
+                                <h2 class="boxTitle">Preferences</h2>
+                                <div class="prefRow">
+                                    <span>Dark Mode</span>
+                                    <label class="themeToggle">
+                                        <input type="checkbox" id="themeSwitch">
+                                        <span class="slider">
+                                            <i class="ri-moon-fill sliderIcon moon"></i>
+                                            <i class="ri-sun-fill sliderIcon sun"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                                <button id="resetBtn" class="btn resetBtn">
+                                    <i class="ri-delete-bin-5-line"></i> Reset All Data
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="settingsPage" class="page hide">
+
+                    <div class="pageHead">
+                        <h1>Settings</h1>
+                        <p>Manage your account profile and app formatting.</p>
+                    </div>
+
+                    <div class="box settingsBox">
+                        <h2 class="boxTitle">Profile Details</h2>
+
+                        <div class="settingsGrid">
+                            <div class="settingsField">
+                                <label for="profileName">Username</label>
+                                <input type="text" id="profileName" value="Punit49">
+                            </div>
+                            <div class="settingsField">
+                                <label for="profileCurrency">Primary Currency</label>
+                                <select id="profileCurrency">
+                                    <option selected value="₹">INR (₹)</option>
+                                    <option value="$">USD (₹)</option>
+                                    <option value="€">EUR (€)</option>
+                                    <option value="£">GBP (£)</option>
+                                    <option value="¥">JPY (¥)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="saveProfileBtn" class="btn saveProfileBtn">Save Changes</button>
+                    </div>
+
+                </div>
+  
+
+
+            </main>
+        </div>
+    </div>
+
+    <section id="addTxnModale" class="modale hide">
+        <div class="formTop">
+            <h1>Add Transaction</h1>
+            <button class="addCloseBtn btn">Close</button>
+        </div>
+        <form id="addTxnForm" class="modaleForm">
+            <label>Type</label>
+            <select id="txnType" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <br>
+
+            <label>Description</label>
+            <input type="text" id="txnDesc" name="description" placeholder="Enter Description">
+            <br>
+
+            <label>Amount</label>
+            <input type="number" min="1" id="txnAmount" name="amount" placeholder="0.00">
+            <br>
+
+            <label>Date</label>
+            <input type="date" id="txnDate" name="date">
+            <br>
+
+            <label>Category</label>
+            <select id="txnCat" name="category">
+                <option value="">Select a category</option>
+                <option value="Food & Dining">Food & Dining</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Recharge & Bills">Recharge & Bills</option>
+                <option value="Petrol & Auto">Petrol & Auto</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Salary">Salary</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+
+            <button id="submitTxnBtn">Save Transaction</button>
+        </form>
+    </section>
+
+    <section id="editTxnModale" class="modale hide">
+        <div class="formTop">
+            <h1>Edit Transaction</h1>
+            <button class="editCloseBtn btn">Close</button>
+        </div>
+        <form id="editTxnForm" class="modaleForm">
+
+            <label>Type</label>
+            <select id="editType" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <br>
+
+            <label>Description</label>
+            <input type="text" id="editDesc" name="description" placeholder="Edit description">
+            <br>
+
+            <label>Amount</label>
+            <input type="number" id="editAmount" name="amount">
+            <br>
+
+            <label>Date</label>
+            <input type="date" id="editDate" name="date">
+            <br>
+
+            <label>Category</label>
+            <select id="editCat" name="category">
+                <option value="">Select a category</option>
+                <option value="Food & Dining">Food & Dining</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Recharge & Bills">Recharge & Bills</option>
+                <option value="Petrol & Auto">Petrol & Auto</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Salary">Salary</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+
+            <button id="updateTxnBtn">Save Transaction</button>
+        </form>
+    </section>
+
+    <section id="loginModale" class="modale authModale hide">
+        <div class="authModaleCard">
+            <div class="authBrand">
+                <div class="brandIcon"><i class="ri-stack-fill"></i></div>
+            </div>
+
+            <h1 class="authTitle">Welcome Back</h1>
+            <p class="authSubtitle">Login to FinTrack Pro</p>
+
+            <form id="loginForm" class="authForm">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" name="username" placeholder="Enter your username" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+
+                <button type="submit" id="loginBtn" class="btn authSubmitBtn loginSubmitBtn">Login</button>
+            </form>
+
+            <p class="authSwitchText">Don't have an account? <a href="#" id="goToRegister" class="authSwitchLink">Register here</a></p>
+        </div>
+    </section>
+
+    <section id="registerModale" class="modale authModale hide">
+        <div class="authModaleCard">
+            <div class="authBrand">
+                <div class="brandIcon"><i class="ri-stack-fill"></i></div>
+            </div>
+
+            <h1 class="authTitle">Create Account</h1>
+            <p class="authSubtitle">Join FinTrack Pro</p>
+
+            <form id="registerForm" class="authForm">
+                <label for="registerUsername">Choose a Username</label>
+                <input type="text" id="registerUsername" name="username" placeholder="Pick a username" required>
+
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="password" placeholder="Create a password" required>
+
+                <button type="submit" id="registerBtn" class="btn authSubmitBtn registerSubmitBtn">Register</button>
+            </form>
+
+            <p class="authSwitchText">Already have an account? <a href="#" id="goToLogin" class="authSwitchLink">Login here</a></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
