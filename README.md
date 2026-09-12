@@ -16,8 +16,8 @@ My goal is to learn consistently, build real-world projects, improve problem-sol
 - ✅ CSS3
 - ✅ JavaScript (In Progress)
 - ✅ Asynchronous JavaScript
-- 🟡 DOM Manipulation
-- ⬜ React.js
+- ✅ DOM Manipulation
+- 🟡 React.js
 - ⬜ Redux Toolkit
 - ⬜ Tailwind CSS
 - ⬜ GSAP & Framer Motion
@@ -28,20 +28,6 @@ My goal is to learn consistently, build real-world projects, improve problem-sol
 - ⬜ REST APIs
 - ⬜ Full Stack Projects
 - ⬜ Deployment
-
-## 📂 Repository Structure
-Cohort3.0
-│
-├── HTML
-├── CSS
-├── JavaScript
-├── React
-├── NodeJS
-├── Express
-├── MongoDB
-├── Projects
-├── Notes
-└── README.md
 
 ## 🛠️ Tech Stack
 ### Frontend
@@ -66,25 +52,6 @@ Cohort3.0
 - Postman
 - Vercel
 - Render
-
-## 📅 Daily Learning Log
-| Day | Topic | Status | 
-|-----|-------|--------|
-| Day 1 | HTML Basics | ✅  |
-| Day 2 | CSS Basics | ✅ |
-| Day 3 | JavaScript Phase-1(Variables )| ✅ |
-| Day 4 | JavaScript Phase-1 (Operators) | ✅ | 
-| Day 5 | JavaScript Phase-1 (Conditionals) | ✅ |
-| Day 6 | JavaScript Phase-1 (Loops) | ✅ |
-| Day 7 | JavaScript Phase-2 (Functions) | ✅ |
-| Day 8 | JavaScript Phase-2 (Arrays) | ✅ |
-| Day 9 | JavaScript Phase-2 (Objects) | ✅ |
-| Day 10 | JavaScript  Phase-3 (How JS Work) | ✅ |
-| Day 11 | JavaScript  Phase-4 (Objects Deeper) | ✅ |
-| Day 12 | JavaScript  Phase-4(OOps) | ✅ |
-| Day 13 | JavaScript  Phase-5(Async JS) | ✅ |
-| Day 14 | JavaScript  Phase-5(Promises and Async JS) | ✅ |
-| Day 15 | JavaScript  (Introduction of DOM) | 🟡 |
 
 ## 💼 Projects
 Projects will be added here as I progress through the Cohort 3.0 curriculum.
