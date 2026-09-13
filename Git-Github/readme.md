@@ -72,8 +72,9 @@ Backup: Store code safely in the cloud using GitHub
 Git vs GitHub
 Many beginners confuse Git and GitHub. They are different things:
 
+# Git 
 Git is a program you install on your computer. It tracks changes to your files locally on your machine.
-
+# Github
 GitHub is a website (github.com) where you can upload and store your Git projects online. Think of it like Google Drive but specifically designed for code.
 
 🟡Simple Analogy:
