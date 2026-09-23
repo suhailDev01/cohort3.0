@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashborad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    
+    <div class="mainContainer text-primary p-3">
+        <main class="flex">
+            <aside class="w-[15%] min-h-screen flex flex-col border-r border-r-gray-800 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20">
+                <h1 class="text-3xl h-[9.5%] font-bold py-5 px-7">DeepFocus</h1>
+                <ul class="sidebar h-[90%] px-2 py-4 flex w-30 flex-col gap-4" id="sideLinks">
+
+                    <li data-section="dashboard" class="p-2 rounded-xl pl-8 list-none active p-2"><a class="flex gap-2 no-underline" href="#"><i class="ri-home-5-line cardHover"></i> Home</a></li>
+
+                    <li data-section="todoCard" class="p-2 rounded-xl pl-8 list-none p-2"><a class="flex gap-2 no-underline" href="#"><i class="ri-task-line cardHover"></i> Todo List</a></li>
+
+                    <li data-section="dailyPlannerCard" class="p-2 rounded-xl pl-8 list-none p-2"><a class="flex gap-2 no-underline" href="#"><i class="ri-calendar-line cardHover"></i> Daily Planner</a></li>
+
+                    <li data-section="weatherCard" class="p-2 rounded-xl pl-8 list-none p-2"><a class="flex gap-2 no-underline" href="#"><i class="ri-sun-line cardHover"></i></i> Weather</a></li>
+
+                    <li data-section="timerCard" class="p-2 rounded-xl pl-8 list-none p-2"><a class="flex gap-2 no-underline" href="#"><i class="ri-timer-line cardHover"></i></i></i> Pomodoro Timer</a></li>
+
+                    <li data-section="dailyGoalsCard" class="p-2 rounded-xl pl-8 list-none p-2"><a class="flex gap-2 no-underline" href="#"><i class="ri-target-line cardHover"></i></i></i></i> Daily Goals</a></li>
+                </ul>
+            </aside>
+
+            <div class="mainRight w-[85%] px-4">
+                <header class="flex py-5 px-7 items-center justify-between border-b border-b-gray-800 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20">
+                    <h1 class="text-2xl text-primary font-bold greetBox">Your Productivity Dashboard</h1>
+                    <div class="flex items-center gap-5">
+                        <label class="themeToggle">
+                            <input type="checkbox" id="themeSwitch">
+                            <span class="slider">
+                                <i class="ri-moon-fill sliderIcon moon"></i>
+                                <i class="ri-sun-fill sliderIcon sun"></i>
+                            </span>
+                        </label>
+                    </div>
+                </header>
+
+                <section id="dashboard" class="contentSections min-h-screen grid gap-4 pt-2 grid-cols-10 grid-rows-6">
+                    <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 p-7 widget border col-start-1 col-end-4 row-[1/4] flex flex-col justify-between gap-6 cardHover" data-card="weatherCard">
+                        <div class="flex weatherDash gap-2 justify-between border-1 bg-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-xl p-5 shadow-[0_1px_12px_rgba(255,255,255,0.05)] ring-1 ring-white/5 h-[55%]">
+                            <h1 class="loading text-2xl flex items-center justify-center w-[100%] h-[100%]">
+                                Loading weather...
+                            </h1>
+                        </div>
+
+                        <div class="h-[45%] dateDash border-1 bg-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-xl p-5 shadow-[0_1px_12px_rgba(255,255,255,0.05)] ring-1 ring-white/5 flex flex-col justify-center gap-2">
+                            <div id="currentTime" class="text-2xl font-semibold"><span class="text-xl">Loading Date and Time...</span></div>
+                            <div id="currentDate" class="text-2xl font-bold"></div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 p-5 widget border border-1 col-start-4 col-end-8 row-[1/5] cardHover" data-card="todoCard">
+                        <h1 class="text-2xl font-bold">Tasks</h1>
+                        <hr class="bg-gray-700 mt-4 p-[0.1px] border-0">
+                        <ul class="todoDash flex flex-col gap-3 overflow-auto max-h-[400px] p-2 mt-7">
+
+                        </ul>
+                    </div>
+
+                    <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 p-3 dailyPlannerDash widget border border-1 col-[8/11] row-[1/5] cardHover" data-card="dailyPlannerCard">
+                        <h1 class="text-2xl font-bold">Daily Planner</h1>
+                        <hr class="bg-gray-700 mt-4 p-[0.1px] border-0 mb-5">
+                        <ul class="dailyPlansDash flex flex-col gap-5 overflow-auto max-h-[400px]">
+                                
+                        </ul>
+                    </div>
+
+                    <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 p-3 dailGoalsDash widget border border-1 col-[1/4] row-[4/8] flex justify-center items-center gap-5 flex-col cardHover" data-card="dailyGoalsCard">
+                        <h1 class="text-3xl font-bold text-primary">Daily Goals 🎯</h1>
+                        <div class="flex ">
+                            <div class="text-9xl text-active font-extrabold completedGoals">0</div>
+                            <span class="text-9xl text-active font-extrabold ">/</span>
+                            <div class="text-9xl text-active font-extrabold totalGoals">0</div>
+                        </div>
+                        <span class="items-baseline text-xl font-bold bg-active text-white px-3 py-1 rounded-lg">Completed</span>
+                    </div>
+
+                    <!-- <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 p-3 pomodoroDash widget border border-1 col-[4/7] row-[5/8]">
+  
+                    </div> -->
+
+                    <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 qouteDash widget border border-1 col-[4/11] row-[5/8] cardHover" data-card="qouteCard">
+                        <div class="min-h-[100px] py-3 px-8 flex flex-col gap-2 justify-between">
+                            <span class="text-9xl max-h-20 text-active">❝</span>
+                            <p id="qoute" class="text-2xl font-bold text-secondary mb-2">Loading Inspiration...</p>
+                            <div class="flex items-center justify-between pb-5">
+                                <p id="qouteAuthor" class="text-xl self-end text-tertory">- Author</p>
+                                <i id="qouteRefreshBtn" class="mt-[35px] ri-restart-line text-3xl text-gray-400 mt-[-36px] cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="todoCard" class="contentSections hide p-10 flex flex-col gap-7  cardHover">
+                    <button class="self-start bg-active text-white px-3 text-lg py-2 rounded-lg backBtn">Return to Dashboard</button>
+                    <div class="todos p-4 w-[60%] min-h-[400px] rounded-xl flex flex-col gap-10 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20">
+                        <div class="todoTop flex w-full gap-5 flex-col">
+                            <div class="flex w-[100%] justify-between mb-2">
+                                <h1 class="text-2xl font-extrabold">Today's Tasks</h1>
+                                <button id="clearTodoBtn" class="text-white bg-red-700 px-4 py-2 rounded">Clear all Tasks</button>
+                            </div>
+                            <div class="flex justify-between gap-4">
+                                <input id="todoInput" type="text" class="w-full bg-transparent border border-gray-200 rounded px-4 py-2 text-secondary" placeholder="What's your plan today">
+
+                                <button id="addTodoBtn" class="flex text-2xl font-extrabold bg-active p-1 rounded px-3 cursor-pointer border border-gray-800">
+                                    <i class="ri-add-large-fill text-white "></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <hr class="bg-gray-500 p-[0.1px] border-0">
+
+                        <div class="todoSection flex flex-col gap-7">
+                            <div class="impTodoBox px-4 py-6 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 hide flex flex-col gap-3">
+                                <h1><i class="ri-star-fill"></i> Important Tasks</h1>
+                                <div class="impTodos rounded flex flex-col gap-3 rounded-xl shadow-2xl shadow-black/20">
+                                    
+                                </div>
+                            </div>
+                            
+                            <ul class="todoLists flex flex-col gap-4">
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="dailyPlannerCard" class="contentSections hide p-10 flex flex-col gap-7 min-w-[100%] cardHover">
+                    <button class="self-start bg-active text-white px-3 text-lg py-2 rounded-lg backBtn">Return to Dashboard</button>
+                    <div class="dailyplannerBox p-4 w-[100%] min-h-[400px] rounded-xl flex flex-col gap-10 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20">
+                        <div class="planTop flex w-full gap-5 flex-col">
+                            <div class="flex justify-between px-1 mb-2">
+                                <h1 class="text-3xl font-bold">Plan Your Day</h1>
+                                <button id="clearPlans" class="text-white bg-red-700 px-4 py-2 rounded">Clear all Plans</button>
+                            </div>
+                            <div class="flex justify-between gap-4">
+                                <input id="planInputTime" type="time" class="w-full bg-transparent border border-gray-200 rounded px-4 py-2 text-secondary" placeholder="What's your plan today">
+                                
+                                <input id="planInputTitle" type="text" class="w-full bg-transparent border border-gray-200 rounded px-4 py-2 text-secondary" placeholder="What's your plan today">
+                                
+                                <button id="addPlanBtn" class="flex text-2xl font-extrabold bg-active p-1 rounded px-3 cursor-pointer borderborder-gray-800">
+                                    <i class="ri-add-large-fill text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <hr class="bg-gray-700 p-[0.1px] border-0">
+
+                        <ul class="plansContainer flex flex-col gap-6 px-4 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 min-h-[300px] py-10 overflow-auto">
+
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="weatherCard" class="contentSections hide p-10 cardHover flex flex-col gap-5">
+                    <button class="self-start bg-active text-white px-3 text-lg py-2 rounded-lg backBtn">Return to Dashboard</button>
+
+                    <div class="rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 p-7 widget border flex flex-col justify-between gap-6">
+                        <div class="flex weatherDash gap-2 justify-between border-1 bg-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-xl p-5 shadow-[0_1px_12px_rgba(255,255,255,0.05)] ring-1 ring-white/5 h-[55%]">
+                            <h1 class="loading text-2xl flex items-center justify-center w-[100%] h-[100%]">
+                                Loading weather...
+                            </h1>
+                        </div>
+
+                        <div class="h-[45%] dateDash border-1 bg-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-xl p-5 shadow-[0_1px_12px_rgba(255,255,255,0.05)] ring-1 ring-white/5 flex flex-col justify-center gap-2">
+                            <div id="currentTime2" class="text-2xl">Loading Date and Time...</div>
+                            <div id="currentDate2" class="text-2xl"></div>
+                        </div>
+                    </div>
+                </section>
+
+               <div id="timerCard" class="flex flex-col gap-6 ms-10 contentSections hide">
+                    <button class="mt-10 self-start bg-active text-white px-3 text-lg py-2 rounded-lg backBtn">Return to Dashboard</button>
+                    
+                    <section class=" p-4 flex flex-col gap-7  p-8 w-[50%] min-h-[400px] flex flex-col gap-5 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 mt-5 cardHover">
+                        
+                        <h1 class="text-2xl font-bold">Pomodoro Timer</h1>
+                        <hr class="bg-gray-500 p-[0.1px] border-0">
+                        <div id="pomodoro" class="timerContainer flex flex-col items-center justify-between h-[200px] gap-7"> 
+                            <div class="timeBox text-[100px] flex font-extrabold text-active p-4 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 w-[80%] justify-center items-center">
+                                <div class="tMinutes">25</div>
+                                <span>:</span>
+                                <div class="tSeconds">00</div>
+                            </div>
+                            <div class="timerBtns flex gap-8">
+                                <button id="pStartStop" class="px-5 py-1 bg-green-600 text-xl font-bold rounded text-white">Start</button>
+                                <button id="pReset" class="px-5 py-1 text-xl font-bold bg-orange-500 rounded text-white">Reset</button>
+                            </div>
+                        </div>
+                    </section>
+               </div>
+               
+               <div id="dailyGoalsCard" class="contentSections hide mt-10 ms-10">
+                    <button class="self-start bg-active text-white px-3 text-lg py-2 rounded-lg backBtn">Return to Dashboard</button>
+                    
+                    <section class="p-4 flex flex-col gap-7  p-8 w-[50%] min-h-[400px] flex flex-col gap-5 rounded-xl bg-white/5 backdrop-blur-3xl border border-white/15 shadow-2xl shadow-black/20 mt-5 cardHover">
+                        
+                        <div class="goalTop flex w-full gap-5 flex-col">
+                            <div class="flex w-[100%] justify-between mb-2 items-center">
+                                <h1 class="text-3xl font-bold">Daily Goals</h1>
+                                <span class="goalsCompleted text-sm font-bold bg-active text-white px-3 py-1 rounded-md">O out 0 Goals Completed</span>
+                            </div>
+                            <div class="flex justify-between gap-4">
+                                <input id="goalInput" type="text" class="w-full bg-transparent border border-gray-200 rounded px-4 py-2 text-secondary" placeholder="What's your plan today">
+                                <button id="addGoalBtn" class="flex text-2xl font-extrabold bg-active p-1 rounded px-3 cursor-pointer border border-gray-800">
+                                    <i class="ri-add-large-fill text-white "></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <hr class="bg-gray-500 p-[0.1px] border-0">
+
+                        <ul class="goalsLists flex flex-col gap-4">
+
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
