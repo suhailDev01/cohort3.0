@@ -3,7 +3,7 @@ import Form from './components/Form'
 const App = () => {
   return (
     <div className='bg-amber-200 h-screen'>
-      <h1 className='p-2 font-medium text-[20px]'>useRef and RHF</h1>
+      <h1 className='p-2 font-medium text-[20px] mb-4'>useRef and RHF</h1>
       <Form />
 
     </div>
