@@ -4,10 +4,9 @@ import Navbar from './components/Navbar'
 import Hero from './components/hero'
 const App = () => {
   return (
-    <div>
-        
-       
-        <Navbar />
+
+    <div className='bg-slate-80 h-screen'>
+          <Navbar />
            <Hero />
           <Product />
      </div>
