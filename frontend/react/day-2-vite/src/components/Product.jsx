@@ -1,13 +1,19 @@
 import React from 'react'
 
-const Product = () => {
+const Product = ({products}) => {
   return (
-    <div>
-        <h1>Product Card</h1>
-        <img src='https://tse2.mm.bing.net/th/id/OIP.UbEI1YgzWs8b_bkdHGkA1wHaHa?r=0&pid=Api&h=220&P=0' alt='img here'></img>
-        <h2>Product Name</h2>
-        <p>Description</p>
-        <p>price</p>
+    <div className='m-2'> 
+  
+    <div className='w-70 border rounded flex flex-col  justify-center   bg-teal-800 mt-6'>
+         <div className='w-70 h-50 object-cover p-2 rounded-xl overflow-hidden'> 
+        <img src={products.image} alt='img here'/>
+        </div>
+        <div> 
+        <h2 className='font-medium text-white'>{products.name}</h2>
+        <p className='text-white'>{products.category}</p>
+        <p className='text-white'>{products.price}</p>
+        </div>
+    </div>
     </div>
   )
 }
