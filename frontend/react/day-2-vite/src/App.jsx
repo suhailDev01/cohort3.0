@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./components/Product";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
-import Register from "./components/Register";
+import Create from "./components/Create";
 
 
 const App = () => {
@@ -92,7 +92,7 @@ const App = () => {
 
     </div>
       < Login />
-      <Register />
+       <Create />
      </div>
   );
 };
