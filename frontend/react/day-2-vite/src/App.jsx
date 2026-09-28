@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./components/Product";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
@@ -6,6 +6,7 @@ import Create from "./components/Create";
 
 
 const App = () => {
+  const [toggle, setToggle] = useState(true)
   const productData = [
     {
       id: 1,
@@ -83,7 +84,7 @@ const App = () => {
     <div>
        <Navbar />
      
-    <div className="bg-slate-80 h-screen   flex-wrap gap-2 grid grid-cols-5">
+    <div className=" h-screen  flex-wrap gap-2 grid grid-cols-5">
       {
         productData.map((elem)=>{
           return <Product products={elem}/>
@@ -91,8 +92,9 @@ const App = () => {
       }
 
     </div>
-      < Login />
-       <Create />
+     {
+     toggle ? <Login setToggle={setToggle}/> : <Create setToggle={setToggle}/>
+     }
      </div>
   );
 };
