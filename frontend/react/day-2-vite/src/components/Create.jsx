@@ -27,15 +27,22 @@ const Create = ({setToggle}) => {
           <div className='flex flex-col gap-3 '>
             < input 
             name='name'
-              value={form.name}
+            value={form.name}
+          
                onChange={handleChange} className='border rounded-xl p-2 ' type="text" placeholder='Full name' />
             < input 
+            name='email'
+            value={form.email}
           
             onChange={handleChange} className='border rounded-xl p-2 ' type="text" placeholder='Email address' />
             < input 
+            name='password'
+            value={form.password}
               
             onChange={handleChange} className='border rounded-xl p-2 ' type="password" placeholder='Password(min 6 chars)' />
             < input 
+            name='password'
+            value={form.password}
              
             onChange={handleChange} className='border rounded-xl p-2 ' type="password" placeholder='Confirm password' />
             <button className='border rounded-xl p-2 bg-blue-600 text-white text-xl border-none'>Create Account
