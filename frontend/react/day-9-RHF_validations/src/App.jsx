@@ -4,7 +4,7 @@ import UserCard from './components/UserCard'
 import Form from './components/Form'
 
 const App = () => {
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
   return (
      <div>
       <Navbar setToggle={setToggle} />

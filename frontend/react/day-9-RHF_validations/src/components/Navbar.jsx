@@ -17,7 +17,7 @@ const Navbar = ({setToggle}) => {
        </div>
        <button
        onClick={()=> setToggle(prev => !prev)}
-        className='p-2 bg-blue-900 text-white rounded-xl'>Create User</button>
+        className='p-2 bg-amber-700 text-white rounded-xl'>Create User</button>
   </div>
   )
 }
