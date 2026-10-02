@@ -1,15 +1,21 @@
-import React, { use } from 'react'
+import React, { use, useState } from 'react'
 import {useForm} from 'react-hook-form'
-const Form = () => {
+
+const Form = ({setUsers}) => {
+
   let {register,
      handleSubmit,
       reset,
-      formState:{errors} } = useForm();
+      formState:{errors} } = useForm({
+        mode:"onChange"
+      });
 
-      console.log("errors->", errors)
+       
 
       let formSubmit = (data)=>{
       console.log(data)
+      setUsers((prev)=>[...prev,data])
+      reset()
       }
   return (
     <div className='flex flex-col gap-4 m-6 items-center'>
