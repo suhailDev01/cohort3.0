@@ -11,15 +11,15 @@ const App = () => {
       <Navbar setToggle={setToggle} />
 
       {
-        toggle ? ( <div className='flex'>
+        toggle ? ( <div className=' flex'>
           {users.map((elem)=>{
-          return <UserCard  users={elem}/>
+          return <UserCard  users={elem} setToggle={setToggle}/>
  } )
           }
            </div> ) : 
         (
           <div 
-          className='flex justify-center items-center'> <Form setUsers={setUsers} /> </div>
+          className='flex justify-center items-center'> <Form setUsers={setUsers} setToggle={setToggle} /> </div>
         )
       }
    

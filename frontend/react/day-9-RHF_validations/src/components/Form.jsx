@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react'
 import {useForm} from 'react-hook-form'
 
-const Form = ({setUsers}) => {
+const Form = ({setUsers, setToggle}) => {
 
   let {register,
      handleSubmit,
@@ -16,6 +16,7 @@ const Form = ({setUsers}) => {
       console.log(data)
       setUsers((prev)=>[...prev,data])
       reset()
+      setToggle((prev) => !prev)
       }
   return (
     <div className='flex flex-col gap-4 m-6 items-center'>
