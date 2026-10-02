@@ -24,28 +24,40 @@ const Form = () => {
             })}
             className='p-2  border rounded outline-0'
              type="text" placeholder='Name' />
-            {errors.name &&  <p className='text-red-600'>Name</p>}
+            {errors.name &&  <p className='text-red-600'>{errors.name.message}</p>}
             < input 
             {...register("email",{
-              required:"email is required"
+              required:"email is required",
+              pattern:{
+                value:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message:"please, enter valid email"
+              }
             })} 
             className='p-2  border rounded outline-0'
              type="email" placeholder='Email' />
-           {errors.email &&   <p className='text-red-600'>Email</p>}
+           {errors.email &&   <p className='text-red-600'>{errors.email.message}</p>}
             < input 
             {...register("number",{
-              required:"number is required"
+              required:"number is required",
+              minLength:{
+                value:10,
+                message:"minimum 10 digits are required"
+              },
+              maxLength:{
+                value: 10,
+                message:"maximum 10 digits are required"
+              }
             })} 
             className='p-2  border rounded outline-0'
              type="number" placeholder='Mobile Number' />
-                 {errors.email &&   <p className='text-red-600'>Number</p>}
+                 {errors.number &&   <p className='text-red-600'> {errors.number.message} </p>}
             < input 
             {...register("image", {
               required:"image is required"
             })} 
             className='p-2  border rounded outline-0'
              type="url" placeholder='Image' />
-            {errors.image &&   <p className='text-red-600'>Image</p>}
+            {errors.image &&   <p className='text-red-600'>{errors.image.message} </p>}
             <button
             className='p-2  border rounded outline-0 bg-blue-600 cursor-pointer text-white'
             >Add User</button>
