@@ -2,9 +2,11 @@ import React from 'react'
 
 const ProductCard = ({product}) => {
   return (
-    <div className='border-2  rounded p-4 flex flex-col gap-0'>
-        <div className='w-50 rounded-2xl'>
-             <img src= {product.image} alt="img" />
+    <div className='border-2  rounded p-4 flex flex-col gap-3'>
+        <div className='w-50 h-60 rounded-2xl'>
+             <img 
+             className='h-full w-full object-cover'
+             src= {product.image} alt="img" />
              </div>
              <div>
                 <h2 className='font-semibold '>{product.title.substring(0,15)}</h2>

@@ -280,7 +280,7 @@ const App = () =>{
  return(
    <div>
    
-    <div className="flex flex-wrap gap-3"> 
+    <div className="flex flex-wrap gap-3 p-3"> 
       {
         productsData.map((elem)=>{
           return <ProductCard product ={elem}/>
