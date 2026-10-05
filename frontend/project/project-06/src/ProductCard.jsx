@@ -3,9 +3,9 @@ import React from 'react'
 const ProductCard = ({product}) => {
 
   return (
-    <div className='m-4 p-4 border-2 bg-indigo-100 rounded flex flex-col'>
-         <div className='w-55 border rounded'>
-            <img src={product.image} alt="img" />
+    <div className='m-4 p-4 border-2 bg-indigo-100 rounded flex flex-col h-100'>
+         <div className='w-60 h-70 border rounded overflow-hidden'>
+            <img className='w-full h-full object-cover' src={product.image} alt="img" />
          </div>
          <div>
             <h2 className='font-medium'> {product.name}</h2>

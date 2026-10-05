@@ -11,7 +11,7 @@ const App = () => {
       <Navbar setToggle={setToggle} />
 
       {
-        toggle ? ( <div className=' flex'>
+        toggle ? ( <div className=' flex flex-wrap p-8'>
           {users.map((elem)=>{
           return <UserCard  users={elem} setToggle={setToggle}/>
  } )
